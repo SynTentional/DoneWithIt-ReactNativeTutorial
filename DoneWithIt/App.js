@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableHighlight, TouchableOpacity, Image, SafeAreaView, TouchableNativeFeedback } from 'react-native';
+import { StyleSheet, Text, View, TouchableHighlight, TouchableOpacity, Image, SafeAreaView, TouchableNativeFeedback, Button } from 'react-native';
 
 export default function App() {
   return (
@@ -8,12 +8,9 @@ export default function App() {
 
     // View -> AndroidView
     <SafeAreaView style={styles.container}>
-      <Text>Hello React Native!</Text>
-      <TouchableNativeFeedback onPress={() => console.log('Image tapped')}>
-        <View style={{ width: 200, height: 70, backgroundColor: "dodgerblue"}}></View> 
-      </TouchableNativeFeedback> 
-      
-      <StatusBar style="auto" />
+      <Button 
+      color="orange"
+      title="Click Me" onPress={() => console.log('Button Pressed')}></Button>
     </SafeAreaView>
   );
 }
