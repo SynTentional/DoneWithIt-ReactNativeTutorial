@@ -7,10 +7,10 @@ export default function App() {
 
 
     // View -> AndroidView
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text>Hello React Native!</Text>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
