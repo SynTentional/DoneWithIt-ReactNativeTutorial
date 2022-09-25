@@ -1,23 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableHighlight, TouchableOpacity, Image, SafeAreaView, TouchableNativeFeedback, Button, Alert } from 'react-native';
+import { StyleSheet, Text, View, TouchableHighlight, TouchableOpacity, Image, SafeAreaView, TouchableNativeFeedback, Button, Alert, Platform, Dimensions} from 'react-native';
 
 export default function App() {
+  console.log(Dimensions.get("screen"));
   return (
     // View -> AndroidView
+    // SafeAreaView -> Only works on iOS
     <SafeAreaView style={styles.container}>
-      <Button 
-        color="orange"
-        title="Click Me" 
-        onPress={() => Alert.alert('My title', "My message", [
-          {text: "Yes", onPress: () => console.log("Yes")},
-          {text: "No", onPress: () => console.log("No") },
-        ])
-        }
-        >
-      </Button>
+      <View style={{
+        backgroundColor: "dodgerblue",
+        width: '50%',
+        height: 70,
+      }}>
+
+      </View>
     </SafeAreaView>
   );
 }
+
+const containerStyle = { backgroundColor: "orange", flex: 1, justifyContent: "center", alignItems: "center" };
 
 const styles = StyleSheet.create({
   container: {
